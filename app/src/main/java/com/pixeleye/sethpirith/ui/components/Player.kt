@@ -9,10 +9,8 @@ import android.os.IBinder
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -26,7 +24,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.zIndex
 import com.pixeleye.sethpirith.R
 import com.pixeleye.sethpirith.data.PirithDataProvider
 import com.pixeleye.sethpirith.service.MediaPlayerService
@@ -217,10 +214,7 @@ fun Player() {
                         modifier = Modifier
                             .border(1.dp, Color.White, RoundedCornerShape(100.dp))
                             .clip(RoundedCornerShape(100.dp))
-                            .clickable(
-                      //          interactionSource = remember { MutableInteractionSource() },
-                     //           indication = rememberRipple(bounded = true) // Ripple effect spans the entire Box
-                            ) { mediaPlayerService?.playPreviousTrack() }
+                            .clickable { mediaPlayerService?.playPreviousTrack() }
                             .padding(8.dp)
                     ) {
                         Icon(
@@ -236,10 +230,7 @@ fun Player() {
                         modifier = Modifier
                             .clip(RoundedCornerShape(100.dp))
                             .background(Primary)
-                            .clickable(
-                       //         interactionSource = remember { MutableInteractionSource() },
-                        //        indication = rememberRipple(bounded = true) // Ripple effect spans the entire Box
-                            ) {
+                            .clickable {
                                 mediaPlayerService?.togglePlayPause()
                             }
                             .padding(15.dp)
@@ -259,10 +250,7 @@ fun Player() {
                         modifier = Modifier
                             .border(1.dp, Color.White, RoundedCornerShape(100.dp))
                             .clip(RoundedCornerShape(100.dp))
-                            .clickable(
-                          //      interactionSource = remember { MutableInteractionSource() },
-                           //     indication = rememberRipple(bounded = true) // Ripple effect spans the entire Box
-                            ) { mediaPlayerService?.playNextTrack() }
+                            .clickable { mediaPlayerService?.playNextTrack() }
                             .padding(8.dp)
                     ) {
                         Icon(

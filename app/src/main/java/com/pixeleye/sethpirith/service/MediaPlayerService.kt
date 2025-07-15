@@ -374,7 +374,7 @@ class MediaPlayerService : Service() {
     }
 
     fun isPlaying(): Boolean = try {
-        mediaPlayer?.isPlaying ?: false
+        mediaPlayer?.isPlaying == true
     } catch (e: IllegalStateException) {
         false
     }

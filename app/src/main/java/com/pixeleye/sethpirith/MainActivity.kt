@@ -55,7 +55,7 @@ class MainActivity : ComponentActivity() {
 
     fun requestIgnoreBatteryOptimizations(context: Context) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            val pm = context.getSystemService(Context.POWER_SERVICE) as PowerManager
+            val pm = context.getSystemService(POWER_SERVICE) as PowerManager
             if (!pm.isIgnoringBatteryOptimizations(context.packageName)) {
                 val intent = Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS).apply {
                     data = android.net.Uri.parse("package:${context.packageName}")
