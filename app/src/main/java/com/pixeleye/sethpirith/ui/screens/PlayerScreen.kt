@@ -101,6 +101,7 @@ fun PlayerScreen(onNavigateToSettings: () -> Unit, onNavigateToList: () -> Unit)
             Box(
                 modifier = Modifier
                     .fillMaxSize()
+                    .fillMaxWidth()
                     .padding(
                         16.dp,50.dp,16.dp,220.dp
                     )  // Add padding to avoid overlap with top and bottom
