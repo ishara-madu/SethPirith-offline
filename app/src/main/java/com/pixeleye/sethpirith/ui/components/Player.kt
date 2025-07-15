@@ -218,8 +218,8 @@ fun Player() {
                             .border(1.dp, Color.White, RoundedCornerShape(100.dp))
                             .clip(RoundedCornerShape(100.dp))
                             .clickable(
-                                interactionSource = remember { MutableInteractionSource() },
-                                indication = rememberRipple(bounded = true) // Ripple effect spans the entire Box
+                      //          interactionSource = remember { MutableInteractionSource() },
+                     //           indication = rememberRipple(bounded = true) // Ripple effect spans the entire Box
                             ) { mediaPlayerService?.playPreviousTrack() }
                             .padding(8.dp)
                     ) {
@@ -237,8 +237,8 @@ fun Player() {
                             .clip(RoundedCornerShape(100.dp))
                             .background(Primary)
                             .clickable(
-                                interactionSource = remember { MutableInteractionSource() },
-                                indication = rememberRipple(bounded = true) // Ripple effect spans the entire Box
+                       //         interactionSource = remember { MutableInteractionSource() },
+                        //        indication = rememberRipple(bounded = true) // Ripple effect spans the entire Box
                             ) {
                                 mediaPlayerService?.togglePlayPause()
                             }
@@ -260,8 +260,8 @@ fun Player() {
                             .border(1.dp, Color.White, RoundedCornerShape(100.dp))
                             .clip(RoundedCornerShape(100.dp))
                             .clickable(
-                                interactionSource = remember { MutableInteractionSource() },
-                                indication = rememberRipple(bounded = true) // Ripple effect spans the entire Box
+                          //      interactionSource = remember { MutableInteractionSource() },
+                           //     indication = rememberRipple(bounded = true) // Ripple effect spans the entire Box
                             ) { mediaPlayerService?.playNextTrack() }
                             .padding(8.dp)
                     ) {
